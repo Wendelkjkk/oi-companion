@@ -20,11 +20,11 @@ const services = [
 ];
 
 const steps = [
-  ["01", "Você me conta a ideia", "Entendo seu negócio e o que você espera do site."],
-  ["02", "Definimos a estrutura", "Organizo as informações para o visitante não se perder."],
-  ["03", "Eu desenvolvo", "Crio o site com foco em visual, velocidade e celular."],
-  ["04", "Você revisa", "Ajustamos os detalhes antes de publicar."],
-  ["05", "Seu site vai ao ar", "Tudo pronto para você começar a divulgar."],
+  ["Você me conta a ideia", "Entendo seu negócio e o que você espera do site."],
+  ["Definimos a estrutura", "Organizo as informações para o visitante não se perder."],
+  ["Eu desenvolvo", "Crio o site com foco em visual, velocidade e celular."],
+  ["Você revisa", "Ajustamos os detalhes antes de publicar."],
+  ["Seu site vai ao ar", "Tudo pronto para você começar a divulgar."],
 ];
 
 function Index() {
@@ -59,7 +59,7 @@ function Index() {
 
       <section id="servicos" className="bg-[#111827] text-white"><div className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-28"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.18em] text-slate-400">O que eu faço</p><h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Sites que fazem seu negócio parecer profissional.</h2><p className="mt-5 leading-7 text-slate-400">Você não precisa de uma plataforma gigante. Precisa de um site que explique seu negócio, passe confiança e facilite o próximo contato.</p></div><div className="mt-12 grid gap-4 md:grid-cols-3">{services.map((service, index) => { const Icon = service.icon; return <div key={service.title} className="rounded-3xl border border-white/10 bg-white/[.04] p-6 transition duration-500 hover:-translate-y-2 hover:bg-white/[.07] animate-fade-up" style={{ animationDelay: `${index * 100}ms` }}><Icon size={22} className="text-slate-300" /><h3 className="mt-6 text-lg font-semibold">{service.title}</h3><p className="mt-2 text-sm leading-6 text-slate-400">{service.text}</p></div> })}</div></div></section>
 
-      <section id="processo" className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32"><div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr]"><div><p className="text-sm font-bold uppercase tracking-[0.18em] text-slate-400">Como funciona</p><h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Sem complicação.</h2><p className="mt-5 leading-7 text-slate-500">Você fala o que precisa. Eu cuido de transformar isso em um site pronto para apresentar seu negócio.</p></div><div className="divide-y divide-slate-900/8">{steps.map(([number, title, text]) => <div key={number} className="group flex gap-5 py-6 first:pt-0 last:pb-0"><span className="font-mono text-xs text-slate-400 transition group-hover:text-slate-950">{number}</span><div><h3 className="font-semibold text-slate-900">{title}</h3><p className="mt-1 text-sm leading-6 text-slate-500">{text}</p></div></div>)}</div></div></section>
+      <section id="processo" className="mx-auto max-w-6xl px-5 py-24 lg:px-8 lg:py-32"><div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr]"><div><p className="text-sm font-bold uppercase tracking-[0.18em] text-slate-400">Como funciona</p><h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Sem complicação.</h2><p className="mt-5 leading-7 text-slate-500">Você fala o que precisa. Eu cuido de transformar isso em um site pronto para apresentar seu negócio.</p></div><div className="divide-y divide-slate-900/8">{steps.map(([title, text]) => <div key={title} className="group py-6 first:pt-0 last:pb-0"><h3 className="font-semibold text-slate-900 transition group-hover:translate-x-1">{title}</h3><p className="mt-1 text-sm leading-6 text-slate-500">{text}</p></div>)}</div></div></section>
 
       <section className="border-y border-slate-900/5 bg-white"><div className="mx-auto grid max-w-6xl gap-8 px-5 py-16 md:grid-cols-3 lg:px-8"><div className="flex gap-4"><Check className="shrink-0" size={20} /><div><h3 className="font-semibold">Preço acessível</h3><p className="mt-1 text-sm text-slate-500">Projetos a partir de R$100, conforme a necessidade.</p></div></div><div className="flex gap-4"><Clock3 className="shrink-0" size={20} /><div><h3 className="font-semibold">Prazo combinado</h3><p className="mt-1 text-sm text-slate-500">Você sabe o que esperar antes de começarmos.</p></div></div><div className="flex gap-4"><ShieldCheck className="shrink-0" size={20} /><div><h3 className="font-semibold">Contato direto</h3><p className="mt-1 text-sm text-slate-500">Você conversa diretamente com quem desenvolve.</p></div></div></div></section>
 
